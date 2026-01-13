@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAXIMUM REALITY | Command Center</title>
+    <style>
+        :root {
+            --azul-blue: #a2d2ff;
+            --mochkil-orange: #ff8c00;
+            --cyber-red: #ff3131;
+            --bg-dark: #0a0a0a;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: #fff;
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--azul-blue);
+            width: 100%;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        .glitch {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: var(--azul-blue);
+        }
+
+        /* --- PODCAST SECTION --- */
+        .broadcast-hub {
+            width: 100%;
+            max-width: 500px;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 15px;
+            background: rgba(162, 210, 255, 0.05);
+            margin-bottom: 25px;
+        }
+
+        .status-bar {
+            display: flex;
+            justify-content: space-between;
+            font-size: 10px;
+            color: var(--azul-blue);
+            margin-bottom: 10px;
+        }
+
+        .on-air {
+            color: var(--cyber-red);
+            animation: pulse 1.5s infinite;
+        }
+
+        /* --- VIDEO SLOTS --- */
+        .video-grid {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .video-card {
+            border: 1px solid #222;
+            padding: 10px;
+            background: #111;
+            position: relative;
+        }
+
+        .tag {
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            font-size: 10px;
+            padding: 2px 8px;
+            background: var(--bg-dark);
+            border: 1px solid;
+        }
+
+        /* --- NAVIGATION BUTTONS --- */
+        .nav-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .nav-btn {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid var(--azul-blue);
+            color: var(--azul-blue);
+            text-decoration: none;
+            font-size: 12px;
+            transition: 0.3s;
+        }
+
+        .nav-btn:active {
+            background: var(--azul-blue);
+            color: #000;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.3; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="glitch">MAXIMUM REALITY</div>
+        <div style="font-size: 10px; color: #666; margin-top: 5px;">EST. 2026 | AZUL_OS v1.0</div>
+    </header>
+
+    <section class="broadcast-hub">
+        <div class="status-bar">
+            <span>AZUL PODCAST NETWORK</span>
+            <span class="on-air">● TRUE CRIME LIVE</span>
+        </div>
+        <h3 style="margin: 10px 0; font-size: 16px;">"He Would Do It Again"</h3>
+        <p style="font-size: 12px; color: #ccc; line-height: 1.4;">
+            10-month-old Azul breaks down the recent snack heist committed by the 5-month-old menace.
+        </p>
+    </section>
+
+    <div class="video-grid">
+        <div class="video-card">
+            <div class="tag" style="color: var(--mochkil-orange); border-color: var(--mochkil-orange);">VAULT_BREACH</div>
+            <video controls width="100%" poster="thumb1.jpg" style="border-radius: 5px;">
+                <source src="download.mp4" type="video/mp4">
+            </video>
+            <p style="font-size: 10px; margin-top: 10px; color: #888;">THE BURGLAR: Orange Hat Incident</p>
+        </div>
+
+        <div class="video-card">
+            <div class="tag" style="color: var(--azul-blue); border-color: var(--azul-blue);">PODCAST_CLIP</div>
+            <video controls width="100%" poster="thumb2.jpg">
+                <source src="true_crime_azul.mp4" type="video/mp4">
+            </video>
+            <p style="font-size: 10px; margin-top: 10px; color: #888;">THE PODCASTER: The Prophecy</p>
+        </div>
+    </div>
+
+    <div class="nav-grid">
+        <a href="404.html" class="nav-btn">ACCESS VAULT</a>
+        <a href="recipes.html" class="nav-btn" style="border-color: var(--mochkil-orange); color: var(--mochkil-orange);">SNACK ATTACK</a>
+        <a href="ghost_lab.html" class="nav-btn">GHOST_LAB</a>
+        <a href="stories.html" class="nav-btn">STARRY NIGHT</a>
+    </div>
+
+    <footer style="margin-top: 50px; font-size: 9px; color: #444; text-align: center;">
+        &copy; 2026 MAXIMUM REALITY | DEVELOPED ON IPHONE 14 PRO MAX
+    </footer>
+
+</body>
+</html>
