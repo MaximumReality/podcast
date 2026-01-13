@@ -3,88 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 | ACCESS DENIED</title>
+    <title>404 | DATA_DEVOURED</title>
     <style>
+        :root {
+            --cyber-red: #ff3131;
+            --azul-blue: #a2d2ff;
+            --mochkil-orange: #ff8c00;
+        }
+
         body {
-            background-color: #000;
-            color: #ff3131;
+            background-color: #050505;
+            color: #fff;
             font-family: 'Courier New', monospace;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
+            padding: 20px;
             text-align: center;
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
-        .warning-icon {
-            font-size: 5rem;
-            margin-bottom: 20px;
-            animation: blink 0.8s infinite;
+        /* MUGSHOT CONTAINER */
+        .mugshot-wrap {
+            width: 100%;
+            max-width: 320px;
+            position: relative;
+            z-index: 2;
+            filter: drop-shadow(0 0 15px rgba(255, 49, 49, 0.4));
+        }
+
+        .mugshot-wrap img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* BOOKING CARD */
+        .booking-card {
+            background: rgba(10, 10, 10, 0.95);
+            border: 1px solid var(--cyber-red);
+            padding: 25px;
+            width: 90%;
+            max-width: 400px;
+            margin-top: -30px; /* Layers under the stool */
+            z-index: 1;
+            box-sizing: border-box;
+            box-shadow: 0 10px 30px rgba(0,0,0,1);
         }
 
         h1 {
-            font-size: 1.5rem;
-            letter-spacing: 5px;
-            border: 2px solid #ff3131;
-            padding: 10px 20px;
-            display: inline-block;
+            font-size: 1.2rem;
+            letter-spacing: 4px;
+            color: var(--cyber-red);
+            margin: 0 0 15px 0;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
         }
 
-        p {
-            font-size: 12px;
-            max-width: 80%;
-            line-height: 1.5;
+        .stats {
+            text-align: left;
+            font-size: 11px;
             color: #888;
+            line-height: 1.8;
         }
 
-        .terminal-text {
-            color: #555;
-            font-size: 10px;
-            margin-top: 30px;
+        .highlight { color: var(--cyber-red); }
+        .orange { color: var(--mochkil-orange); }
+
+        .report-text {
+            font-size: 13px;
+            color: #ccc;
+            margin-top: 20px;
+            line-height: 1.5;
+            word-break: break-all; /* Prevents long URLs from cutting off */
         }
 
         .back-link {
-            margin-top: 40px;
-            color: #fff;
+            margin-top: 30px;
+            color: var(--azul-blue);
             text-decoration: none;
-            border: 1px solid #fff;
-            padding: 10px 20px;
+            border: 1px solid var(--azul-blue);
+            padding: 12px 25px;
             font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             transition: 0.3s;
         }
 
-        .back-link:hover {
-            background: #fff;
+        .back-link:active {
+            background: var(--azul-blue);
             color: #000;
-        }
-
-        @keyframes blink {
-            0% { opacity: 1; }
-            50% { opacity: 0; }
-            100% { opacity: 1; }
         }
     </style>
 </head>
 <body>
 
-    <div class="warning-icon">⚠</div>
-    <h1>ACCESS DENIED</h1>
-    
-    <p>
-        The sector you are trying to reach is currently encrypted <br> 
-        or has been compromised by the <strong>@mochkilsnackthief</strong>.
-    </p>
-
-    <div class="terminal-text">
-        ERROR_CODE: 404_FILE_NOT_FOUND<br>
-        LOCATION: UNKNOWN_SECTOR<br>
-        STATUS: LOCKDOWN_ACTIVE
+    <div class="mugshot-wrap">
+        <img src="Mochkil_Booking.png" alt="Mochkil Mugshot">
     </div>
 
-    <a href="index.html" class="back-link">RETURN TO COMMAND CENTER</a>
+    <div class="booking-card">
+        <h1>BOOKING REPORT: 404</h1>
+        
+        <div class="stats">
+            <div><span class="highlight">SUSPECT:</span> MOCHKIL LUKAS T. [SNACK THIEF]</div>
+            <div><span class="highlight">BOOKED:</span> 01-13-2026 | 13:42 PST</div>
+            <div><span class="highlight">CHARGE:</span> URL_INTERCEPTION & CONSUMPTION</div>
+            <div><span class="highlight">STATUS:</span> <span class="orange">IN_CUSTODY (HE IS NOT SORRY)</span></div>
+        </div>
+
+        <p class="report-text">
+            The sector you requested was intercepted. Suspect was found on a stool with the missing data packets.
+        </p>
+    </div>
+
+    <a href="index.html" class="back-link">Return to Command</a>
 
 </body>
 </html>
