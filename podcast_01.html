@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAXIMUM REALITY | True Crime Network</title>
+    <style>
+        body {
+            background: #050505;
+            color: #e0e0e0;
+            font-family: 'Courier New', monospace;
+            padding: 20px;
+        }
+        .header-logo {
+            text-align: center;
+            border-bottom: 1px solid #ff3131;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        .case-file {
+            border: 1px solid #333;
+            background: #111;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        .evidence-tag {
+            background: #ff3131;
+            color: white;
+            padding: 2px 8px;
+            font-size: 10px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .audio-wave {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            height: 20px;
+            margin-top: 10px;
+        }
+        .bar {
+            width: 3px;
+            background: #a2d2ff;
+            animation: move 0.5s infinite alternate;
+        }
+        @keyframes move { from { height: 5px; } to { height: 18px; } }
+    </style>
+</head>
+<body>
+
+<div class="header-logo">
+    <h1 style="font-size: 18px; color: #ff3131; margin: 0;">AZUL'S TRUE CRIME FILES</h1>
+    <span style="font-size: 10px; color: #666;">PODCAST BRANCH // REPO: 404_HEISTS</span>
+</div>
+
+<div class="case-file">
+    <div class="evidence-tag">EVIDENCE_01: CCTV_FOOTAGE</div>
+    <div style="background: #000; width: 100%; aspect-ratio: 9/16; border: 1px solid #222; display: flex; align-items: center; justify-content: center;">
+        <video controls style="width: 100%; height: 100%;">
+            <source src="download.mp4" type="video/mp4">
+        </video>
+    </div>
+    <p style="font-size: 11px; color: #888; margin-top: 10px;">[ LOCATION ]: MALL FOOD COURT | [ DISTRACTION ]: SILVERWARE DROID</p>
+</div>
+
+<div class="case-file" style="border-left: 4px solid #a2d2ff;">
+    <div class="evidence-tag" style="background: #a2d2ff; color: #000;">AUDIO_TRANSCRIPT</div>
+    <p style="font-style: italic; font-size: 13px; color: #fff;">
+        "I'm telling you... the orange hat wasn't just a costume. It was a statement. He stared at that droid, waited for the glitch, and took the burger. He would do it again."
+    </p>
+    <div class="audio-wave">
+        <div class="bar" style="animation-delay: 0.1s"></div>
+        <div class="bar" style="animation-delay: 0.3s"></div>
+        <div class="bar" style="animation-delay: 0.2s"></div>
+        <div class="bar" style="animation-delay: 0.4s"></div>
+    </div>
+</div>
+
+<div style="text-align: center; margin-top: 40px;">
+    <a href="index.html" style="color: #666; text-decoration: none; font-size: 10px;">[ RETURN TO MAIN_REALITY ]</a>
+</div>
+
+</body>
+</html>
